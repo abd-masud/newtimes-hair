@@ -1,0 +1,953 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50">
+        <div class="flex justify-between items-center bg-[#000206] md:px-10 px-[10px] md:py-[15px] py-[10px]">
+            <p class="text-[14px] font-bold text-white xl:block hidden">Make Every Piece Worth It</p>
+            <a class="text-[14px] font-bold text-white xl:block hidden" href="#">ARE YOU A SALON PROFESSIONAL? <span
+                    class="underline">
+                    Click to open a
+                    professional account!
+                </span></a>
+            <a class="md:text-[14px] text-[12px] font-bold text-white xl:hidden block" href="#">Sign Up to Unlock
+                Wholesale Prices
+            </a>
+            <div class="flex items-center gap-5">
+                <div class="relative">
+                    <button id="currencyButton"
+                        class="bg-[#000206] text-white md:text-[16px] text-[12px] flex items-center gap-2">
+                        USD
+                        <svg class="md:w-4 w-3 md:h-4 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="currencyDropdown"
+                        class="absolute hidden bg-[#000206] text-white mt-2 rounded shadow-lg z-10">
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">USD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">EUR</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">AUD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">CAD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">GBP</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button id="languageButton"
+                        class="bg-[#000206] text-white md:text-[16px] text-[12px] flex items-center gap-2">
+                        <img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/en_US_flag.webp" alt="English">
+                        English
+                        <svg class="md:w-4 w-3 md:h-4 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="languageDropdown"
+                        class="absolute hidden bg-[#000206] text-white md:text-[16px] text-[12px] mt-2 shadow-lg z-10">
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/en_US_flag.webp"
+                                alt="English">
+                            English</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/it.svg"
+                                alt="Italiano"> Italiano</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/fr.svg"
+                                alt="Francais"> Francais</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/es.svg"
+                                alt="Espanol"> Espanol</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/de.svg"
+                                alt="Deutsch"> Deutsch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- Navigation -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <img src="assets/images/dec-home-banner-web-1.jpg" alt="Background Image" class="w-full">
+        <div class="absolute inset-0 flex justify-center items-center mt-[20%] text-white">
+            <button class="border border-black py-[18px] px-[70px] text-black">CLICK TO WIN</button>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="max-w-screen-xl mx-auto px-4 py-12">
+        <h1 class="text-[30px] font-bold text-center">Manufacturer of Premium Hair Pieces for Men and Women</h1>
+        <h2 class="text-[40px] text-center">Product Categories</h2>
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-4 mt-5">
+            <a href="#">
+                <img class="w-full h-auto" src="assets/images/hair-system.jpg" alt="Hair Systems">
+                <p class="text-[20px] text-center mt-2">Hair Systems</p>
+            </a>
+            <a href="#">
+                <img class="w-full h-auto" src="assets/images/Topper-Wigs.jpg" alt="Topper Wigs">
+                <p class="text-[20px] text-center mt-2">Hair Systems</p>
+            </a>
+            <a href="#">
+                <img class="w-full h-auto" src="assets/images/Hair-Extensions.webp" alt="Hair Extensions">
+                <p class="text-[20px] text-center mt-2">Hair Systems</p>
+            </a>
+            <a href="#">
+                <img class="w-full h-auto" src="assets/images/Supplies.webp" alt="Supplies">
+                <p class="text-[20px] text-center mt-2">Hair Systems</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Pro Account -->
+    <section class="max-w-screen-xl mx-auto px-4 py-12">
+        <h2 class="text-[40px] text-center mb-5">Apply for A Pro Account</h2>
+        <p class="text-[18px] text-center">Newtimes Hair products are designed exclusively for hair professionals.</p>
+        <p class="text-[18px] text-center">For personal use, we recommend consulting your local salon or stylist for
+            expert guidance
+            and care!</p>
+
+        <div class="grid grid-cols-3 gap-4 mt-10">
+            <div class="bg-[#F4F4F3] px-5 pb-10">
+                <h3 class="font-bold text-[34px] py-1 text-center">Step1</h3>
+                <p>Fill out our wholesale application form with accurate information about your business to ensure a
+                    quick verification.</p>
+            </div>
+            <div class="bg-[#F4F4F3] px-5 pb-10">
+                <h3 class="font-bold text-[34px] py-1 text-center">Step2</h3>
+                <p>A sales rep will activate your wholesale account once your information is validated.</p>
+            </div>
+            <div class="bg-[#F4F4F3] px-5 pb-10">
+                <h3 class="font-bold text-[34px] py-1 text-center">Step3</h3>
+                <p>Get full access to our website and start to order with wholesale deals.</p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-5">
+            <a class="text-[#306AED] underline font-[20px] hover:scale-110 transition-all duration-200" href="#">Apply
+                Now</a>
+        </div>
+    </section>
+
+    <!-- Video: Piece Worth It -->
+    <section class="relative p-60 w-full overflow-hidden">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+            <source src="assets/videos/Newtimes_Hair_homepage_video_x7dtb3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="relative z-10 flex flex-col items-center justify-center h-full w-full text-center text-white px-4">
+            <h2 class="text-[40px] font-bold mb-4">Make Every Piece Worth It</h2>
+            <p class="text-[22px] mb-4">
+                Hair professionals' one-stop destination for premium hair systems, wigs, and extensions.
+            </p>
+            <p class="text-[22px] mb-6">Together, we'll make every piece worth it.</p>
+            <a href="#"
+                class="px-6 py-3 bg-white text-[#306AED] font-semibold border border-white rounded-md hover:bg-transparent hover:text-white transition-all duration-300">
+                Discover More
+            </a>
+        </div>
+    </section>
+
+    <!-- Men's Hair Systems -->
+    <section class="bg-[#F8F8F8]">
+        <div class="max-w-screen-2xl mx-auto px-4 py-12">
+            <h2 class="text-[34px] text-center mb-5">Men's Hair Systems</h2>
+            <p class="text-[18px] text-center text-[#444444]">Bestsellers</p>
+            <div class="4slide mt-5">
+                <div class="rounded-md overflow-hidden relative flex flex-col h-full"><img
+                        src="assets/images/men-hair-system-main.jpeg" alt="men-hair-systems">
+                    <a class="bg-white text-[#306AED] absolute bottom-10 ml-[50%] -translate-x-[50%] border border-white hover:bg-transparent hover:text-white transition-all duration-200 px-8 py-3"
+                        href="#">View
+                        More</a>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-6-1-600x600.jpg" alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>HS1 : Thin Skin Men's Hair Systems 0.08mm Transparent Poly Skin</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/HS25V-0.03mm-Ultra-Thin-Skin-Hair-System-with-V-Loops-All-Over-6-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>HS25-V : 0.03mm Ultra Thin Skin Men's Hair Systems White V-looped Human Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/NEW-AUSTRALIA-Lace-Hair-Systems-with-Wider-Clear-PU-11-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>NEWAUSTRALIA : Swiss Lace Hair System Toupee With a Wider PU Perimeter</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/HS7-Full-French-Lace-Hair-System-for-Men-4-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>HS7 : Full Swiss Lace Hair System Realistic Hairline</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/HOLLYWOOD-French-Lace-Hair-System-with-Poly-around-14-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>HOLLYWOOD : Lace Hair System for Men With Thin Skin Perimeter for and Lace Front</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Wigs and Toppers -->
+    <section class="bg-[#F8F8F8]">
+        <div class="max-w-screen-2xl mx-auto px-4 py-12">
+            <h2 class="text-[34px] text-center mb-5">Women's Wigs and Toppers</h2>
+            <p class="text-[18px] text-center text-[#444444]">Bestsellers</p>
+            <div class="4slide mt-5">
+                <div class="rounded-md overflow-hidden relative flex flex-col h-full"><img
+                        src="assets/images/women-hair-and-wigs-main.webp" alt="men-hair-systems">
+                    <a class="bg-white text-[#306AED] absolute bottom-10 ml-[50%] -translate-x-[50%] border border-white hover:bg-transparent hover:text-white transition-all duration-200 px-8 py-3"
+                        href="#">View
+                        More</a>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/HEATHER-Remy-Hair-Medical-Wig-with-Hand-Tied-Lace-wholesale-at-Newtimes-Hair-NT-4-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>HEATHER : Fully Hand-Tied Lace Wig With Fine Mongolian Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/NATALIE-Hand-Tied-Lace-Wigs-Premium-Mongolian-Remy-Hair-for-caucasion-women-Newtimes-Hair-5-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>NATALIE : 100% Hand-Tied Lace Wig With Diamond Lace Top</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/SIDNEY-Mono-Human-Hair-Topper-order-from-NEWTIMES-HAIR-T-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>SIDNEY : Mono Human Hair Topper Premium Mongolian Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/ELOISE-Fine-Welded-Mono-Hair-Topper-order-from-NEWTIMES-HAIR-4-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>ELOISE : Fine Welded Mono Hair Topper First-Class Mongolian Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/KAILANI-High-Grade-Remy-Human-Hair-Topper-order-from-NEWTIMES-HAIR-W-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>KAILANI : High-Grade Remy Human Hair Topper With Fine Mongolian Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hair Extensions -->
+    <section class="bg-[#F8F8F8]">
+        <div class="max-w-screen-2xl mx-auto px-4 py-12">
+            <h2 class="text-[34px] text-center mb-5">Hair Extensions</h2>
+            <p class="text-[18px] text-center text-[#444444]">Bestsellers</p>
+            <div class="4slide mt-5">
+                <div class="rounded-md overflow-hidden relative flex flex-col h-full"><img
+                        src="assets/images/haie-extension-main.webp" alt="men-hair-systems">
+                    <a class="bg-white text-[#306AED] absolute bottom-10 ml-[50%] -translate-x-[50%] border border-white hover:bg-transparent hover:text-white transition-all duration-200 px-8 py-3"
+                        href="#">View
+                        More</a>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/GENIUS-WEFT-Hair-Extensions-7-Star-Full-Cuticle-Remy-Hair-A-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>GENIUS-WEFT : Hair Extensions, 7-Star Full Cuticle Remy Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/TAPE-IN-Extensions-Human-Hair-With-Full-Cuticles-7-Star-Quality-q-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>TAPE-IN : Extensions Human Hair With Full Cuticles, 7-Star Quality</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/FLAT-TIP-Keratin-Bond-Hair-Extensions-7-Star-Full-Cuticle-Remy-Hair-A-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>I-TIP : Keratin Bond Hair Extensions, 7-Star Full Cuticle Remy Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/FLAT-TIP-Keratin-Bond-Hair-Extensions-7-Star-Full-Cuticle-Remy-Hair-A-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>FLAT-TIP : Keratin Bond Hair Extensions 7-Star Full Cuticle Remy Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+                <div class="rounded-md overflow-hidden flex flex-col h-full"><img
+                        src="assets/images/CLIP-IN-Human-Hair-Extensions-With-6-Star-Remy-Hair-C-600x600.jpg"
+                        alt="men-hair-systems">
+                    <div class="bg-white p-5 flex flex-col justify-between">
+                        <p>CLIP-IN-FULL-SET : Hair Extensions With 6-Star Human Hair</p>
+                        <a class="text-[#306AED] underline" href="#">Get a
+                            Wholesale Price</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why NH -->
+    <section class="max-w-screen-2xl mx-auto px-4 py-12">
+        <h2 class="text-[40px] text-center">Why Newtimes Hair?</h2>
+        <div class="3slide mt-16">
+            <div class="px-7">
+                <h3 class="font-bold text-center mb-8">Wholesale Wigs Manufacturer</h3>
+                <ul class="list-disc text-[#636363] text-[15px]">
+                    <li>
+                        Over 100 highly specialized senior wig-makers, craftsmen with decades of experience
+                    </li>
+                    <li>
+                        Constantly supply with the highest quality standards
+                    </li>
+                </ul>
+            </div>
+            <div class="px-7">
+                <h3 class="font-bold text-center mb-8">Great Variety and Massive Stock</h3>
+                <ul class="list-disc text-[#636363] text-[15px]">
+                    <li>
+                        Over 80,000 wholesale toupees ready for immediate shipment
+                    </li>
+                    <li>
+                        Lace, skin, and mono toupees available along with 50+ hair colors
+                    </li>
+                </ul>
+            </div>
+            <div class="px-7">
+                <h3 class="font-bold text-center mb-8">
+                    Enjoy Competitive Wholesale Price
+                </h3>
+                <ul class="list-disc text-[#636363] text-[15px]">
+                    <li>
+                        Factory-direct prices, no middleman adding to your cost
+                    </li>
+                    <li>
+                        Bulk discounts for large-quantity orders
+                    </li>
+                </ul>
+            </div>
+            <div class="px-7">
+                <h3 class="font-bold text-center mb-8">Unmatched Customization Options</h3>
+                <ul class="list-disc text-[#636363] text-[15px]">
+                    <li>
+                        Fulfill around 100,000 custom orders every year
+                    </li>
+                    <li>
+                        Customize any toupee to meet all your customers' needs
+                    </li>
+                </ul>
+            </div>
+            <div class="px-7">
+                <h3 class="font-bold text-center mb-8">30-Day Free Return Policy</h3>
+                <ul class="list-disc text-[#636363] text-[15px]">
+                    <li>
+                        Free 30-day return guarantee for every client
+                    </li>
+                    <li>
+                        No risk for overseas purchase
+                    </li>
+                </ul>
+            </div>
+            <div class="px-7">
+                <h3 class="font-bold text-center mb-8">Client Worldwide Turn to Us</h3>
+                <ul class="list-disc text-[#636363] text-[15px]">
+                    <li>
+                        Wholesale toupee to the US's Leading Hair Replacement Brands
+                    </li>
+                    <li>
+                        With clients throughout 100+ countries around the world
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback -->
+    <section class="max-w-screen-md mx-auto px-4 py-12">
+        <h2 class="text-center text-[40px]">Wholesale Customer Feedback</h2>
+        <div class="1slide mt-10">
+            <div><img src="assets/images/customer-feedback-1.jpg" alt="women-wigs-and-toppers">
+                <p class="px-4 py-2 min-h-20">“Their support and dedication to helping my business thrive are unmatched.
+                    If
+                    you're in
+                    search of a
+                    wig or hair
+                    extension supplier who not only provides exceptional products but also takes the time to build a
+                    genuine connection, I
+                    wholeheartedly recommend Newtimes Hair. ”</p>
+                <span class="block text-end italic text-[#959595]">— —Sophia</span>
+            </div>
+            <div><img src="assets/images/customer-feedback-2-1.jpg" alt="women-wigs-and-toppers">
+                <p class="px-4 py-2 min-h-20">“Newtimes Hair is not just a hair supplier, but a friendly and attentive
+                    partner. They
+                    understand
+                    that each brand has
+                    its own unique clientele, and they work closely with us to tailor their products to suit my target
+                    market. ”</p>
+                <span class="block text-end italic text-[#959595]">— —Maria</span>
+            </div>
+            <div><img src="assets/images/customer-feedback-3.jpg" alt="women-wigs-and-toppers">
+                <p class="px-4 py-2 min-h-20">“It was wonderful to engage in a friendly conversation and get to know the
+                    faces behind
+                    their
+                    exceptional products. They
+                    continue to be my go-to supplier for top-notch wigs and accessories. ”</p>
+                <span class="block text-end italic text-[#959595]">— —Lillian</span>
+            </div>
+            <div><img src="assets/images/customer-feedback-4.jpg" alt="women-wigs-and-toppers">
+                <p class="px-4 py-2 min-h-20">“As Newtimes Hair's brand ambassador for several years, I have come to
+                    greatly
+                    admire
+                    their
+                    commitment to quality and
+                    customer service. My own salon has thrived by offering their hairpieces. I highly recommend Newtimes
+                    Hair to those
+                    seeking top-notch hair systems.”</p>
+                <span class="block text-end italic text-[#959595]">— —Dan</span>
+            </div>
+            <div><img src="assets/images/customer-feedback-5.jpg" alt="women-wigs-and-toppers">
+                <p class="px-4 py-2 min-h-20">“We feel lucky to meet Newtimes Hair when we just thinking of starting our
+                    hair system
+                    business in
+                    our salon. The
+                    professional and knowledgeable team guided us every step of the way. ”</p>
+                <span class="block text-end italic text-[#959595]">— —Hudson</span>
+            </div>
+            <div><img src="assets/images/new-times-hair-customer-review6.webp" alt="women-wigs-and-toppers">
+                <p class="px-4 py-2 min-h-20">“As a hairpiece wearer myself, just like my clients, I find Newtimes
+                    Hair's
+                    products to
+                    be
+                    meticulously made, easy to
+                    attach, and durable. Having been with Newtimes Hair for several years, their products have given me
+                    so much confidence."</p>
+                <span class="block text-end italic text-[#959595]">— —Michael</span>
+            </div>
+        </div>
+        <div class="flex justify-center mt-5">
+            <a class="text-[#306AED] underline font-[20px] hover:scale-110 transition-all duration-200" href="#">View
+                More</a>
+        </div>
+    </section>
+
+    <!-- Resource -->
+    <section class="max-w-screen-xl mx-auto px-4 py-12">
+        <h2 class="text-center text-[40px]">Resource</h2>
+        <div class="grid grid-cols-3 gap-10 mt-10">
+            <a href="#" class="flex flex-col justify-center items-center gap-4 bg-[#F3F3F3] py-8"><svg
+                    aria-hidden="true" class="svg-inline--fa fa-shopping-cart" style="width: 36px; height: 36px;"
+                    focusable="false" data-prefix="fal" data-icon=" shopping-cart" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg>
+                    <path fill="currentColor"
+                        d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16l37.9 0c7.6 0 14.2 5.3 15.7 12.8l58.9 288c6.1 29.8 32.3 51.2 62.7 51.2L496 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-304.8 0c-15.2 0-28.3-10.7-31.4-25.6L152 288l314.6 0c29.4 0 55-20 62.1-48.5L570.6 71.8c5-20.2-10.2-39.8-31-39.8L99.1 32C92.5 13 74.4 0 53.9 0L16 0zm90.1 64l433.4 0L497.6 231.8C494 246 481.2 256 466.5 256l-321.1 0L106.1 64zM168 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm80 0a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm200-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112z">
+                    </path>
+                </svg>
+                <p>Order Guide</p>
+            </a>
+            <a href="#" class="flex flex-col justify-center items-center gap-4 bg-[#F3F3F3] py-8"><svg
+                    aria-hidden="true" class="svg-inline--fa fa-shopping-cart" style="width: 36px; height: 36px;"
+                    focusable="false" data-prefix="fal" data-icon=" shopping-cart" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg>
+                    <path fill="currentColor"
+                        d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16l37.9 0c7.6 0 14.2 5.3 15.7 12.8l58.9 288c6.1 29.8 32.3 51.2 62.7 51.2L496 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-304.8 0c-15.2 0-28.3-10.7-31.4-25.6L152 288l314.6 0c29.4 0 55-20 62.1-48.5L570.6 71.8c5-20.2-10.2-39.8-31-39.8L99.1 32C92.5 13 74.4 0 53.9 0L16 0zm90.1 64l433.4 0L497.6 231.8C494 246 481.2 256 466.5 256l-321.1 0L106.1 64zM168 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm80 0a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm200-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112z">
+                    </path>
+                </svg>
+                <p>Free Catalog</p>
+            </a>
+            <a href="#" class="flex flex-col justify-center items-center gap-4 bg-[#F3F3F3] py-8"><svg
+                    aria-hidden="true" class="svg-inline--fa fa-shopping-cart" style="width: 36px; height: 36px;"
+                    focusable="false" data-prefix="fal" data-icon=" shopping-cart" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg>
+                    <path fill="currentColor"
+                        d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16l37.9 0c7.6 0 14.2 5.3 15.7 12.8l58.9 288c6.1 29.8 32.3 51.2 62.7 51.2L496 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-304.8 0c-15.2 0-28.3-10.7-31.4-25.6L152 288l314.6 0c29.4 0 55-20 62.1-48.5L570.6 71.8c5-20.2-10.2-39.8-31-39.8L99.1 32C92.5 13 74.4 0 53.9 0L16 0zm90.1 64l433.4 0L497.6 231.8C494 246 481.2 256 466.5 256l-321.1 0L106.1 64zM168 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm80 0a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm200-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112z">
+                    </path>
+                </svg>
+                <p>Start-up Package</p>
+            </a>
+            <a href="#" class="flex flex-col justify-center items-center gap-4 bg-[#F3F3F3] py-8"><svg
+                    aria-hidden="true" class="svg-inline--fa fa-shopping-cart" style="width: 36px; height: 36px;"
+                    focusable="false" data-prefix="fal" data-icon=" shopping-cart" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg>
+                    <path fill="currentColor"
+                        d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16l37.9 0c7.6 0 14.2 5.3 15.7 12.8l58.9 288c6.1 29.8 32.3 51.2 62.7 51.2L496 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-304.8 0c-15.2 0-28.3-10.7-31.4-25.6L152 288l314.6 0c29.4 0 55-20 62.1-48.5L570.6 71.8c5-20.2-10.2-39.8-31-39.8L99.1 32C92.5 13 74.4 0 53.9 0L16 0zm90.1 64l433.4 0L497.6 231.8C494 246 481.2 256 466.5 256l-321.1 0L106.1 64zM168 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm80 0a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm200-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112z">
+                    </path>
+                </svg>
+                <p>Hair Replacement Training</p>
+            </a>
+            <a href="#" class="flex flex-col justify-center items-center gap-4 bg-[#F3F3F3] py-8"><svg
+                    aria-hidden="true" class="svg-inline--fa fa-shopping-cart" style="width: 36px; height: 36px;"
+                    focusable="false" data-prefix="fal" data-icon=" shopping-cart" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg>
+                    <path fill="currentColor"
+                        d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16l37.9 0c7.6 0 14.2 5.3 15.7 12.8l58.9 288c6.1 29.8 32.3 51.2 62.7 51.2L496 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-304.8 0c-15.2 0-28.3-10.7-31.4-25.6L152 288l314.6 0c29.4 0 55-20 62.1-48.5L570.6 71.8c5-20.2-10.2-39.8-31-39.8L99.1 32C92.5 13 74.4 0 53.9 0L16 0zm90.1 64l433.4 0L497.6 231.8C494 246 481.2 256 466.5 256l-321.1 0L106.1 64zM168 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm80 0a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm200-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112z">
+                    </path>
+                </svg>
+                <p>Video Tutorials</p>
+            </a>
+            <a href="#" class="flex flex-col justify-center items-center gap-4 bg-[#F3F3F3] py-8"><svg
+                    aria-hidden="true" class="svg-inline--fa fa-shopping-cart" style="width: 36px; height: 36px;"
+                    focusable="false" data-prefix="fal" data-icon=" shopping-cart" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg>
+                    <path fill="currentColor"
+                        d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16l37.9 0c7.6 0 14.2 5.3 15.7 12.8l58.9 288c6.1 29.8 32.3 51.2 62.7 51.2L496 384c8.8 0 16-7.2 16-16s-7.2-16-16-16l-304.8 0c-15.2 0-28.3-10.7-31.4-25.6L152 288l314.6 0c29.4 0 55-20 62.1-48.5L570.6 71.8c5-20.2-10.2-39.8-31-39.8L99.1 32C92.5 13 74.4 0 53.9 0L16 0zm90.1 64l433.4 0L497.6 231.8C494 246 481.2 256 466.5 256l-321.1 0L106.1 64zM168 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm80 0a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm200-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112z">
+                    </path>
+                </svg>
+                <p>Latest Blogs</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="bg-[#F0F0F0]">
+        <div class="max-w-screen-xl mx-auto px-4 py-20">
+            <h2 class="text-[20px] text-center font-bold">INQUIRIES & QUESTIONS</h2>
+            <form class="mt-10" action="#">
+                <div class="grid grid-cols-2 gap-5">
+                    <input class="w-full border focus:outline-none focus:ring-0 px-3 py-2 text-[#495057]"
+                        placeholder="Name *" type="text" name="name" id="name">
+                    <input class="w-full border focus:outline-none focus:ring-0 px-3 py-2 text-[#495057]"
+                        placeholder="Email Address *" type="email" name="email" id="email">
+                    <select
+                        class="w-full border focus:outline-none focus:ring-0 px-2 py-2 text-[#495057] country-select"
+                        aria-placeholder="Country *" name="country" id="country">
+                        <option value="">Country *</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Åland Islands">Åland Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The
+                        </option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cote D'ivoire">Cote D'ivoire</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option>
+                        <option value="French Southern Territories">French Southern Territories</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guernsey">Guernsey</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-bissau">Guinea-bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                        <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Isle of Man">Isle of Man</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jersey">Jersey</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of
+                        </option>
+                        <option value="Korea, Republic of">Korea, Republic of</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macao">Macao</option>
+                        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav
+                            Republic of</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                        <option value="Moldova, Republic of">Moldova, Republic of</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Netherlands Antilles">Netherlands Antilles</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Reunion">Reunion</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Helena">Saint Helena</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South
+                            Sandwich Islands</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Taiwan">Taiwan</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-leste">Timor-leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands
+                        </option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Virgin Islands, British">Virgin Islands, British</option>
+                        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                    <input class="w-full border focus:outline-none focus:ring-0 px-3 py-2 text-[#495057]"
+                        placeholder="Phone/Whatsapp *" type="text" name="phone" id="phone">
+                    <input class="w-full border focus:outline-none focus:ring-0 px-3 py-2 text-[#495057]"
+                        placeholder="Business Name *" type="text" name="business" id="business">
+                    <input class="w-full border focus:outline-none focus:ring-0 px-3 py-2 text-[#495057]"
+                        placeholder="Business Role-I am a/an...*" type="text" name="role" id="role">
+                </div>
+                <textarea class="w-full focus:outline-none focus:ring-0 mt-5 px-3 py-2 h-24 text-[#495057]"
+                    placeholder="Any questions or product demands/ size/ color/ length/ quantity/ price/ other information *"
+                    name="question" id="question"></textarea>
+                <div class="flex justify-center">
+                    <input
+                        class="border border-[#306AED] bg-[#306AED] text-white hover:bg-transparent hover:text-[#306AED] transition-all duration-200 mt-10 h-11 w-64 rounded-md cursor-pointer"
+                        type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="bg-[#222222] flex flex-col items-center px-4 py-10">
+            <h2 class="text-[20px] font-bold text-white">Hey, let's keep in touch!</h2>
+            <p class="text-white">Be the first to get exclusive offers, in-stock updates, tips and more.</p>
+            <form class="mt-4" action="#">
+                <input class="px-4 py-3" placeholder="Your email address" size="40" type="email" name="email"
+                    id="email">
+                <input class="font-semibold bg-[#306AED] text-white cursor-pointer px-10 py-3" type="submit"
+                    value="Subscribe">
+            </form>
+        </div>
+
+        <div class="bg-[#1C1C1C] py-10">
+            <div class="max-w-screen-xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 px-4">
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">COMPANY</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Men</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Women</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Extensions</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Supplies</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">About</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Blog</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Careers</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">WARRANTY</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Payment
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Shipping
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Privacy
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Terms
+                        and
+                        conditions</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Locations we
+                        ship to</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Customer
+                        copyright protection</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">HELP & SUPPORT</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Custom
+                        order
+                        form</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Add-on
+                        services</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Feedback
+                        &
+                        complaints</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">FAQs</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">CONTACT</h3>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">USA</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:1-310-902-6685">1-310-902-6685</a></p>
+                        <p class="text-white">Email: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="mailto:ussales@newtimeshair.com">ussales@newtimeshair.com</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">Spain</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:34-611-098-284">34-611-098-284</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">Headquarters</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:86-186-6193-9293">86-186-6193-9293</a></p>
+                        <p class="text-white">WhatsApp: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:86-186-6193-9293"></a>86-186-6193-9293</p>
+                        </p>
+                        <p class="text-white">Email: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="mailto:info@newtimeshair.com">info@newtimeshair.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#1C1C1C] px-4 flex flex-col items-center py-5 border-t">
+            <img src="assets/images/footer-icons.webp" alt="Footer Icons">
+            <p class="text-white mt-2 mb-4">Wholesale human hair replacement system, wig and hair extension
+                manufacturer.</p>
+            <p class="text-white">© 2025 Newtimes Hair. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+
+</html>
