@@ -91,23 +91,136 @@ $('.1slide').slick({
     // nextArrow: '<button type="button" class="slick-next">Next</button>',
 });
 
-function showMoreImages() {
-    const container = document.getElementById("more-images");
+const images = [
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+    "assets/images/1-2-150x150.jpg",
+];
 
-    if (container.classList.contains("hide")) {
-        for (let i = 0; i < 58; i++) {
+
+const imageContainer = document.getElementById("image-container");
+const showMoreBtn = document.getElementById("show-more-btn");
+const imageCountSpan = document.getElementById("image-count");
+const hoverContainer = document.getElementById("hover-container");
+
+let isExpanded = false;
+
+imageCountSpan.textContent = images.length;
+
+function renderImages(isExpanded) {
+    const dynamicImages = imageContainer.querySelectorAll("a");
+    dynamicImages.forEach((anchor, index) => {
+        if (index >= 5) anchor.remove();
+    });
+
+    if (isExpanded) {
+        images.forEach((imageSrc) => {
+            const anchor = document.createElement("a");
+            anchor.href = "#";
+            anchor.classList.add(
+                "block",
+                "h-7",
+                "w-7",
+                "p-[2px]",
+                "border",
+                "hover:border-[#F1C342]",
+                "transition-all",
+                "duration-200"
+            );
+
             const img = document.createElement("img");
-            img.src = "assets/images/1-2-150x150.jpg";
-            img.alt = `HS1 - ${i + 1}`;
-            img.className = "h-7 w-7";
-            container.appendChild(img);
-        }
-        container.classList.remove("hide");
+            img.src = imageSrc;
+            img.alt = "Image";
+
+            anchor.appendChild(img);
+            imageContainer.appendChild(anchor);
+        });
+
+        imageContainer.classList.add("grid");
+        imageContainer.classList.remove("flex");
+        imageContainer.style.gridTemplateColumns = "repeat(9, 1fr)";
+        imageContainer.style.gap = "10px";
+
+        showMoreBtn.style.display = "none";
     } else {
-        container.classList.add("hide");
-        container.innerHTML = "";
+        imageContainer.classList.remove("grid");
+        imageContainer.classList.add("flex");
+        imageContainer.style.gridTemplateColumns = "";
+        imageContainer.style.gap = "";
+
+        showMoreBtn.style.display = "flex";
     }
 }
+
+showMoreBtn.addEventListener("click", () => {
+    isExpanded = true;
+    renderImages(isExpanded);
+});
+
+hoverContainer.addEventListener("mouseleave", () => {
+    if (isExpanded) {
+        isExpanded = false;
+        renderImages(isExpanded);
+    }
+});
+
 
 function toggleFAQ(button) {
     const answer = button.nextElementSibling;
