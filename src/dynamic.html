@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50">
+        <div class="flex justify-between items-center bg-[#000206] md:px-10 px-[10px] md:py-[15px] py-[10px]">
+            <p class="text-[14px] font-bold text-white xl:block hidden">Make Every Piece Worth It</p>
+            <a class="text-[14px] font-bold text-white xl:block hidden" href="#">ARE YOU A SALON PROFESSIONAL? <span
+                    class="underline">
+                    Click to open a
+                    professional account!
+                </span></a>
+            <a class="md:text-[14px] text-[12px] font-bold text-white xl:hidden block" href="#">Sign Up to Unlock
+                Wholesale Prices
+            </a>
+            <div class="flex items-center gap-5">
+                <div class="relative">
+                    <button id="currencyButton"
+                        class="bg-[#000206] text-white md:text-[16px] text-[12px] flex items-center gap-2">
+                        USD
+                        <svg class="md:w-4 w-3 md:h-4 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="currencyDropdown"
+                        class="absolute hidden bg-[#000206] text-white mt-2 rounded shadow-lg z-10">
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">USD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">EUR</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">AUD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">CAD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">GBP</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button id="languageButton"
+                        class="bg-[#000206] text-white md:text-[16px] text-[12px] flex items-center gap-2">
+                        <img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/en_US_flag.webp" alt="English">
+                        English
+                        <svg class="md:w-4 w-3 md:h-4 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="languageDropdown"
+                        class="absolute hidden bg-[#000206] text-white md:text-[16px] text-[12px] mt-2 shadow-lg z-10">
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/en_US_flag.webp"
+                                alt="English">
+                            English</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/it.svg"
+                                alt="Italiano"> Italiano</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/fr.svg"
+                                alt="Francais"> Francais</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/es.svg"
+                                alt="Espanol"> Espanol</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/de.svg"
+                                alt="Deutsch"> Deutsch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <nav class="bg-white shadow-lg">
+                <div class=" md:px-10 px-[10px]">
+                    <div class="grid grid-cols-3 h-16">
+                        <div class="flex items-center w-full">
+                            <a href="#" class="flex items-center">
+                                <img src="assets/images/logo.webp" alt="Logo" class="h-6 w-auto">
+                            </a>
+                        </div>
+
+                        <div class="hidden md:flex items-center justify-center space-x-8 w-full">
+                            <a href="#" class="text-[#1F2124] font-bold">Men</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Women</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Extensions</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Clearance</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Supplies</a>
+                            <a href="#" class="text-[#1F2124] font-bold">About</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Support</a>
+                        </div>
+
+                        <div class="flex items-center justify-end space-x-4 w-full">
+                            <a href="#" class="text-[#1F2124] font-bold">Search</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Login</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section
+        class="max-w-screen-xl mx-auto px-4 py-3 flex md:flex-row flex-col md:items-center items-start md:gap-2 gap-0">
+        <div class="flex items-center gap-2 md:text-[16px] text-[14px]">
+            <a class="text-[#306AED] hover:text-[#F9D161] transition-all duration-300" href="#">Home</a>
+            »
+            <a class="text-[#306AED] hover:text-[#F9D161] transition-all duration-300" href="#">Men's Hair Systems</a>
+            »
+            <a class="text-[#306AED] hover:text-[#F9D161] transition-all duration-300" href="#">Stock</a>
+            »
+        </div>
+        <p class="leading-tight md:text-[16px] text-[14px]">HS7FAFRO : African American Male Hair Unit Wholesale</p>
+    </section>
+
+    <!-- Main item -->
+    <section class="max-w-screen-xl mx-auto px-4 grid grid-cols-11 gap-4">
+        <div class="col-span-5">
+            <img src="assets/images/HOLLYWOOD-French-Lace-Hair-System-with-Poly-around-14.jpg" alt="Item">
+        </div>
+        <div>
+            purchase
+        </div>
+    </section>
+
+    <!-- Description / Reviews / Policy -->
+    <section class="max-w-screen-xl mx-auto px-4">
+        <div class="flex items-center gap-5 border-b">
+            <button id="description-btn"
+                class="text-[#306AED] border-t-[3px] border-[#306AED] font-bold py-1 transition-all duration-500">
+                Description
+            </button>
+            <button id="reviews-btn"
+                class="text-[#515151] border-t-[3px] border-transparent font-bold py-1 transition-all duration-500">
+                Reviews
+            </button>
+            <button id="policy-btn"
+                class="text-[#515151] border-t-[3px] border-transparent font-bold py-1 transition-all duration-500">
+                Policy
+            </button>
+        </div>
+
+        <div id="description-section" class="mt-5">
+            <p>Description Section</p>
+        </div>
+        <div id="reviews-section" class="mt-5 hidden">
+            <p>Reviews Section</p>
+        </div>
+        <div id="policy-section" class="mt-5 hidden">
+            <p>Policy Section</p>
+        </div>
+    </section>
+
+    <!-- Exclusive wholesaler -->
+    <section class="relative">
+        <img src="assets/images/exclusive-wholesaler.jpg" alt="Men" class="w-full object-right md:h-[440px] h-[360px]">
+        <div class="absolute inset-0 flex flex-col items-center justify-between my-14 mx-5">
+            <h2 class="md:text-[34px] text-[20px] font-bold mb-2 leading-tight text-center">
+                Join us as an exclusive wholesaler
+            </h2>
+            <p class="text-[28px] text-[#F9D161]">Why join?</p>
+            <p class="md:text-[24px] text-[15px]">Get the best wholesale prices</p>
+            <p class="md:text-[24px] text-[15px]">Special offer for sample orders</p>
+            <p class="md:text-[24px] text-[15px]">Access to product experts</p>
+            <a href="#"
+                class="md:text-[16px] text-[15px] text-center text-white font-bold bg-[#306AED] border border-[#306AED] hover:text-[#306AED] hover:bg-white px-[34px] py-[10px] mt-4 rounded-full transition-all duration-300">
+                Apply Now
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mt-20">
+        <h2 class="text-[24px] font-bold text-center">FAQs</h2>
+        <div id="faq-container" class="max-w-screen-xl px-4 mx-auto mt-8 flex flex-col gap-5">
+
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-gray-300">
+                <button
+                    class="flex justify-between items-center font-bold lg:text-[18px] text-[16px] w-full py-4 px-3 text-left text-lg border-x border-t border-[#D1DFEE]"
+                    onclick="toggleFAQ(this)">
+                    Do men’s hair replacement systems look natural?
+                    <span class="icon transition-transform duration-300">+</span>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-300 border-x border-[#D1DFEE]"
+                    style="height: 0;">
+                    <div class="p-4 pb-4 text-[#444444] border-t border-[#D1DFEE]">
+                        <p>Yes, our men’s hair systems for the purpose of replacing your client’s thinning crown
+                            with a full head of hair just like
+                            his own, so that others can’t tell he’s got hair that’s not his own. That’s why men’s
+                            hair systems are also known as
+                            men’s realistic wigs or realistic men’s hair wigs. All our men’s hair systems in stock
+                            are crafted with 100% human hair
+                            and meticulous attention to detail to ensure a natural appearance. And naturalness and
+                            realism are everything good men’s
+                            hair systems are about. They blend seamlessly with your client’s existing hair and
+                            create a convincing, realistic look.
+                            When properly applied, they look undetectable on the head. Read our related post to have
+                            a complete idea of what a good
+                            and bad toupee is: What Is a Good Toupee and What is a Bad one?</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex justify-center py-5">
+            <button id="toggle-faq"
+                class="font-[20px] text-[#306AED] border-b border-[#306AED] scale-100 hover:scale-110 transition-all duration-300">
+                More
+            </button>
+        </div>
+    </section>
+
+    <!-- Related products -->
+    <section class="max-w-screen-xl mx-auto px-4 mt-5 mb-10">
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-5">
+            <!-- item -->
+            <div class="group relative">
+                <a href="#">
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-6-1-600x600.jpg" alt="Men's hair systems"
+                        class="w-full transition-opacity duration-300 group-hover:opacity-0">
+
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-5.jpg" alt="Men's Hair System"
+                        class="w-full absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                    <p class="text-[18px] mb-3 mx-5 mt-3">
+                        <span class="font-bold">HS1 :</span> Thin Skin Men's Hair Systems 0.08mm Transparent Poly Skin
+                    </p>
+                </a>
+            </div>
+            <!-- item -->
+            <div class="group relative">
+                <a href="#">
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-6-1-600x600.jpg" alt="Men's hair systems"
+                        class="w-full transition-opacity duration-300 group-hover:opacity-0">
+
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-5.jpg" alt="Men's Hair System"
+                        class="w-full absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                    <p class="text-[18px] mb-3 mx-5 mt-3">
+                        <span class="font-bold">HS1 :</span> Thin Skin Men's Hair Systems 0.08mm Transparent Poly Skin
+                    </p>
+                </a>
+            </div>
+            <!-- item -->
+            <div class="group relative">
+                <a href="#">
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-6-1-600x600.jpg" alt="Men's hair systems"
+                        class="w-full transition-opacity duration-300 group-hover:opacity-0">
+
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-5.jpg" alt="Men's Hair System"
+                        class="w-full absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                    <p class="text-[18px] mb-3 mx-5 mt-3">
+                        <span class="font-bold">HS1 :</span> Thin Skin Men's Hair Systems 0.08mm Transparent Poly Skin
+                    </p>
+                </a>
+            </div>
+            <!-- item -->
+            <div class="group relative">
+                <a href="#">
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-6-1-600x600.jpg" alt="Men's hair systems"
+                        class="w-full transition-opacity duration-300 group-hover:opacity-0">
+
+                    <img src="assets/images/HS1-0.08mm-Thin-Skin-Hair-System-5.jpg" alt="Men's Hair System"
+                        class="w-full absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                    <p class="text-[18px] mb-3 mx-5 mt-3">
+                        <span class="font-bold">HS1 :</span> Thin Skin Men's Hair Systems 0.08mm Transparent Poly Skin
+                    </p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="bg-[#222222] flex flex-col items-center px-4 py-10">
+            <h2 class="text-[20px] font-bold text-white">Hey, let's keep in touch!</h2>
+            <p class="text-white">Be the first to get exclusive offers, in-stock updates, tips and more.</p>
+            <form class="mt-4 flex items-center" action="#">
+                <input class="px-4 py-3" placeholder="Your email address" type="email" name="email" id="email">
+                <input class="font-semibold bg-[#306AED] text-white cursor-pointer sm:px-10 px-7 py-3" type="submit"
+                    value="Subscribe">
+            </form>
+        </div>
+
+        <div class="bg-[#1C1C1C] py-10">
+            <div class="max-w-screen-xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 px-4">
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">COMPANY</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Men</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Women</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Extensions</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Supplies</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">About</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Blog</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Careers</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">WARRANTY</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Payment
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Shipping
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Privacy
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Terms
+                        and
+                        conditions</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Locations we
+                        ship to</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Customer
+                        copyright protection</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">HELP & SUPPORT</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Custom
+                        order
+                        form</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Add-on
+                        services</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Feedback
+                        &
+                        complaints</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">FAQs</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">CONTACT</h3>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">USA</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:1-310-902-6685">1-310-902-6685</a></p>
+                        <p class="text-white">Email: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="mailto:ussales@newtimeshair.com">ussales@newtimeshair.com</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">Spain</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:34-611-098-284">34-611-098-284</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">Headquarters</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:86-186-6193-9293">86-186-6193-9293</a></p>
+                        <p class="text-white">WhatsApp: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:86-186-6193-9293"></a>86-186-6193-9293</p>
+                        </p>
+                        <p class="text-white">Email: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="mailto:info@newtimeshair.com">info@newtimeshair.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#1C1C1C] px-4 flex flex-col items-center py-5 border-t">
+            <img src="assets/images/footer-icons.webp" alt="Footer Icons">
+            <p class="text-white mt-2 mb-4">Wholesale human hair replacement system, wig and hair extension
+                manufacturer.</p>
+            <p class="text-white">© 2025 Newtimes Hair. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+
+</html>
