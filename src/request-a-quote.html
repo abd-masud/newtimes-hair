@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50">
+        <div class="flex justify-between items-center bg-[#000206] md:px-10 px-[10px] md:py-[15px] py-[10px]">
+            <p class="text-[14px] font-bold text-white xl:block hidden">Make Every Piece Worth It</p>
+            <a class="text-[14px] font-bold text-white xl:block hidden" href="#">ARE YOU A SALON PROFESSIONAL? <span
+                    class="underline">
+                    Click to open a
+                    professional account!
+                </span></a>
+            <a class="md:text-[14px] text-[12px] font-bold text-white xl:hidden block" href="#">Sign Up to Unlock
+                Wholesale Prices
+            </a>
+            <div class="flex items-center gap-5">
+                <div class="relative">
+                    <button id="currencyButton"
+                        class="bg-[#000206] text-white md:text-[16px] text-[12px] flex items-center gap-2">
+                        USD
+                        <svg class="md:w-4 w-3 md:h-4 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="currencyDropdown"
+                        class="absolute hidden bg-[#000206] text-white mt-2 rounded shadow-lg z-10">
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">USD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">EUR</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">AUD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">CAD</a>
+                        <a class="md:text-[16px] text-[12px] block px-4 py-2 hover:bg-gray-700 cursor-pointer transition-all duration-200"
+                            href="#">GBP</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button id="languageButton"
+                        class="bg-[#000206] text-white md:text-[16px] text-[12px] flex items-center gap-2">
+                        <img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/en_US_flag.webp" alt="English">
+                        English
+                        <svg class="md:w-4 w-3 md:h-4 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="languageDropdown"
+                        class="absolute hidden bg-[#000206] text-white md:text-[16px] text-[12px] mt-2 shadow-lg z-10">
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/en_US_flag.webp"
+                                alt="English">
+                            English</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/it.svg"
+                                alt="Italiano">
+                            Italiano</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/fr.svg"
+                                alt="Francais">
+                            Francais</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/es.svg"
+                                alt="Espanol">
+                            Espanol</a>
+                        <a class="flex items-center gap-2 md:px-4 px-2 md:pr-10 pr-6 py-2 hover:bg-gray-700 transition-all duration-200"
+                            href="#"><img class="md:h-3 h-2 md:w-[18px] w-[14px]" src="assets/images/de.svg"
+                                alt="Deutsch">
+                            Deutsch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <nav class="bg-white shadow-lg">
+                <div class=" md:px-10 px-[10px]">
+                    <div class="grid grid-cols-3 h-16">
+                        <div class="flex items-center w-full">
+                            <a href="#" class="flex items-center">
+                                <img src="assets/images/logo.webp" alt="Logo" class="h-6 w-auto">
+                            </a>
+                        </div>
+
+                        <div class="hidden md:flex items-center justify-center space-x-8 w-full">
+                            <a href="#" class="text-[#1F2124] font-bold">Men</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Women</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Extensions</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Clearance</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Supplies</a>
+                            <a href="#" class="text-[#1F2124] font-bold">About</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Support</a>
+                        </div>
+
+                        <div class="flex items-center justify-end space-x-4 w-full">
+                            <a href="#" class="text-[#1F2124] font-bold">Search</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Login</a>
+                            <a href="#" class="text-[#1F2124] font-bold">Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Card -->
+    <section class="max-w-screen-xl mx-auto px-4 py-20">
+        <h1 class="text-[26px] text-[#212529]">Request a Quote</h1>
+        <div class="flex flex-col gap-6">
+            <p class="font-semibold text-[#212529]">Please fill in the details below thoroughly for a quick and precise
+                wholesale
+                quote.</p>
+
+            <!-- Null cart -->
+            <div class="bg-[#F7F6F7] p-5 border-t-2 border-[#306AED]">
+                <span class="font-semibold text-[#515151]">You currently have no items in your quote list</span>
+            </div>
+            <div>
+                <a href="#"
+                    class="border border-[#306AED] bg-[#306AED] text-white font-semibold px-[30px] py-[10px] rounded hover:bg-white hover:text-[#306AED] transition-all duration-300">
+                    Return to Shop
+                </a>
+            </div>
+            <!-- Null cart -->
+
+
+            <!-- Cart -->
+            <form action="#">
+                <div class="flex gap-10 mb-10">
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">First name:</label>
+                        <input class="px-2 py-2.5 w-full border" id="first" type="text">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="last">Last name:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                </div>
+                <div class="flex gap-10 mb-10">
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="email">Email address:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="address">Address:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                </div>
+                <div class="flex gap-10 mb-10">
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="country">Country:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="state">State:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                </div>
+                <div class="flex gap-10 mb-10">
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">City:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">Postcode / ZIP:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                </div>
+                <div class="flex gap-10 mb-10">
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">Phone/Whatsapp:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">Business Name:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                </div>
+                <div class="flex gap-10 mb-10">
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">Business Type:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="text-[14px] font-bold" for="first">License Type:</label>
+                        <input class="px-2 py-2.5 w-full border" type="text">
+                    </div>
+                </div>
+                <div class="flex flex-col w-full mb-10">
+                    <label class="text-[14px] font-bold" for="first">License Number:</label>
+                    <input class="px-2 py-2.5 w-full border" type="text">
+                </div>
+                <div class="flex flex-col w-full">
+                    <label class="text-[14px] font-bold" for="first">Message:</label>
+                    <textarea class="px-2 py-2.5 w-full border"></textarea>
+                </div>
+                <div class="mt-5">
+                    <input
+                        class="border border-[#306AED] bg-[#306AED] text-white font-semibold px-[30px] py-[10px] rounded hover:bg-white hover:text-[#306AED] transition-all duration-300"
+                        type="submit" value="Request quote">
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="bg-[#222222] flex flex-col items-center px-4 py-10">
+            <h2 class="text-[20px] font-bold text-white">Hey, let's keep in touch!</h2>
+            <p class="text-white">Be the first to get exclusive offers, in-stock updates, tips and more.</p>
+            <form class="mt-4 flex items-center" action="#">
+                <input class="px-4 py-3" placeholder="Your email address" type="email" name="email" id="email">
+                <input class="font-semibold bg-[#306AED] text-white cursor-pointer sm:px-10 px-7 py-3" type="submit"
+                    value="Subscribe">
+            </form>
+        </div>
+
+        <div class="bg-[#1C1C1C] py-10">
+            <div class="max-w-screen-xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 px-4">
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">COMPANY</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Men</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Women</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Extensions</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Supplies</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">About</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Blog</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Careers</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">WARRANTY</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Payment
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Shipping
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Privacy
+                        policy</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Terms
+                        and
+                        conditions</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                        href="#">Locations we
+                        ship to</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Customer
+                        copyright protection</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">HELP & SUPPORT</h3>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Custom
+                        order
+                        form</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Add-on
+                        services</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">Feedback
+                        &
+                        complaints</a>
+                    <a class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300" href="#">FAQs</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-white text-[18px] font-bold mb-2">CONTACT</h3>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">USA</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:1-310-902-6685">1-310-902-6685</a></p>
+                        <p class="text-white">Email: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="mailto:ussales@newtimeshair.com">ussales@newtimeshair.com</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">Spain</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:34-611-098-284">34-611-098-284</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="text-white font-bold">Headquarters</h4>
+                        <p class="text-white">Phone: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:86-186-6193-9293">86-186-6193-9293</a></p>
+                        <p class="text-white">WhatsApp: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="tel:86-186-6193-9293"></a>86-186-6193-9293</p>
+                        </p>
+                        <p class="text-white">Email: <a
+                                class="text-white text-[15px] hover:text-[#F9D161] transition-all duration-300"
+                                href="mailto:info@newtimeshair.com">info@newtimeshair.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#1C1C1C] px-4 flex flex-col items-center py-5 border-t">
+            <img src="assets/images/footer-icons.webp" alt="Footer Icons">
+            <p class="text-white mt-2 mb-4">Wholesale human hair replacement system, wig and hair extension
+                manufacturer.</p>
+            <p class="text-white">© 2025 Newtimes Hair. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+
+</html>

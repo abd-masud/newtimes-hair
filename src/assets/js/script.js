@@ -1,3 +1,4 @@
+// Script 1
 const currencyButton = document.getElementById('currencyButton');
 const currencyDropdown = document.getElementById('currencyDropdown');
 const languageButton = document.getElementById('languageButton');
@@ -21,8 +22,18 @@ document.addEventListener('click', (e) => {
         languageDropdown.classList.add('hidden');
     }
 });
+// Script 1
 
 
+
+
+
+
+
+
+
+
+// Script 2
 $('.4slide').slick({
     dots: true,
     infinite: false,
@@ -51,7 +62,18 @@ $('.4slide').slick({
         },
     ]
 });
+// Script 2
 
+
+
+
+
+
+
+
+
+
+// Script 3
 $('.4slideAuto').slick({
     dots: false,
     infinite: true,
@@ -82,7 +104,18 @@ $('.4slideAuto').slick({
         },
     ]
 });
+// Script 3
 
+
+
+
+
+
+
+
+
+
+// Script 4
 $('.3slide').slick({
     dots: false,
     infinite: false,
@@ -109,7 +142,18 @@ $('.3slide').slick({
         },
     ]
 });
+// Script 4
 
+
+
+
+
+
+
+
+
+
+// Script 5
 $('.1slide').slick({
     dots: true,
     infinite: false,
@@ -121,7 +165,18 @@ $('.1slide').slick({
     // prevArrow: '<button type="button" class="slick-prev">Prev</button>',
     // nextArrow: '<button type="button" class="slick-next">Next</button>',
 });
+// Script 5
 
+
+
+
+
+
+
+
+
+
+// Script 6
 $('.1slideAuto').slick({
     dots: false,
     infinite: true,
@@ -135,7 +190,18 @@ $('.1slideAuto').slick({
     // prevArrow: '<button type="button" class="slick-prev">Prev</button>',
     // nextArrow: '<button type="button" class="slick-next">Next</button>',
 });
+// Script 6
 
+
+
+
+
+
+
+
+
+
+// Script 7
 const images = [
     "assets/images/1-2-150x150.jpg",
     "assets/images/1-2-150x150.jpg",
@@ -198,7 +264,6 @@ const images = [
     "assets/images/1-2-150x150.jpg",
     "assets/images/1-2-150x150.jpg",
 ];
-
 
 const imageContainer = document.getElementById("image-container");
 const showMoreBtn = document.getElementById("show-more-btn");
@@ -265,8 +330,18 @@ hoverContainer.addEventListener("mouseleave", () => {
         renderImages(isExpanded);
     }
 });
+// Script 7
 
 
+
+
+
+
+
+
+
+
+// Script 8
 function toggleFAQ(button) {
     const answer = button.nextElementSibling;
     const icon = button.querySelector(".icon");
@@ -309,43 +384,51 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleButton.textContent = isExpanded ? 'More' : 'Less';
     });
 });
+// Script 8
 
-const descriptionBtn = document.getElementById('description-btn');
-const reviewsBtn = document.getElementById('reviews-btn');
-const policyBtn = document.getElementById('policy-btn');
 
-const descriptionSection = document.getElementById('description-section');
-const reviewsSection = document.getElementById('reviews-section');
-const policySection = document.getElementById('policy-section');
 
-function showSection(sectionToShow, activeBtn) {
-    descriptionSection.classList.add('hidden');
-    reviewsSection.classList.add('hidden');
-    policySection.classList.add('hidden');
 
-    sectionToShow.classList.remove('hidden');
 
-    descriptionBtn.classList.remove('text-[#306AED]', 'border-[#306AED]');
-    descriptionBtn.classList.add('text-[#515151]', 'border-transparent');
 
-    reviewsBtn.classList.remove('text-[#306AED]', 'border-[#306AED]');
-    reviewsBtn.classList.add('text-[#515151]', 'border-transparent');
 
-    policyBtn.classList.remove('text-[#306AED]', 'border-[#306AED]');
-    policyBtn.classList.add('text-[#515151]', 'border-transparent');
 
-    activeBtn.classList.remove('text-[#515151]', 'border-transparent');
-    activeBtn.classList.add('text-[#306AED]', 'border-[#306AED]');
+
+
+// Script 9
+const container = document.getElementById('imageButtonContainer');
+
+for (let i = 1; i <= 50; i++) {
+    const button = document.createElement('button');
+    button.className = 'border focus:border-black';
+
+    const img = document.createElement('img');
+    img.className = 'h-[46px] w-[46px]';
+    img.src = 'assets/images/1-2-150x150.jpg';
+    img.alt = `Item ${i}`;
+
+    button.appendChild(img);
+
+    container.appendChild(button);
 }
 
-descriptionBtn.addEventListener('click', () =>
-    showSection(descriptionSection, descriptionBtn)
-);
-reviewsBtn.addEventListener('click', () =>
-    showSection(reviewsSection, reviewsBtn)
-);
-policyBtn.addEventListener('click', () =>
-    showSection(policySection, policyBtn)
-);
+const decrementButton = document.getElementById('decrement');
+const incrementButton = document.getElementById('increment');
+const quantityInput = document.getElementById('quantity');
 
-showSection(descriptionSection, descriptionBtn);
+decrementButton.addEventListener('click', () => {
+    let currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    }
+});
+
+incrementButton.addEventListener('click', () => {
+    let currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+});
+
+document.getElementById('addToQuote').addEventListener('click', () => {
+    alert(`You added ${quantityInput.value} items to the quote.`);
+});
+// Script 9
