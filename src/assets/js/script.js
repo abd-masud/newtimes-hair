@@ -32,6 +32,68 @@ document.addEventListener('click', (e) => {
 
 
 
+// Navigation
+document.addEventListener("DOMContentLoaded", () => {
+    const links = [
+        { id: "men-link", dropdown: "men-dropdown" },
+        { id: "women-link", dropdown: "women-dropdown" },
+        { id: "extensions-link", dropdown: "extensions-dropdown" },
+        { id: "clearance-link", dropdown: "clearance-dropdown" },
+        { id: "about-link", dropdown: "about-dropdown" },
+        { id: "support-link", dropdown: "support-dropdown" },
+    ];
+
+    const dropdownSection = document.getElementById("dropdown-section");
+    let activeDropdown = null;
+    let hoverTimer = null;
+
+    function showDropdown(dropdownContent) {
+        clearTimeout(hoverTimer);
+        dropdownSection.classList.remove("hidden");
+        if (activeDropdown && activeDropdown !== dropdownContent) {
+            activeDropdown.classList.add("hidden");
+        }
+        dropdownContent.classList.remove("hidden");
+        activeDropdown = dropdownContent;
+    }
+
+    function hideDropdown() {
+        hoverTimer = setTimeout(() => {
+            if (!dropdownSection.matches(":hover")) {
+                dropdownSection.classList.add("hidden");
+                if (activeDropdown) {
+                    activeDropdown.classList.add("hidden");
+                    activeDropdown = null;
+                }
+            }
+        });
+    }
+
+    links.forEach(({ id, dropdown }) => {
+        const link = document.getElementById(id);
+        const dropdownContent = document.getElementById(dropdown);
+
+        link.addEventListener("mouseenter", () => showDropdown(dropdownContent));
+        link.addEventListener("mouseleave", hideDropdown);
+
+        dropdownContent.addEventListener("mouseenter", () => {
+            clearTimeout(hoverTimer);
+        });
+        dropdownContent.addEventListener("mouseleave", hideDropdown);
+    });
+
+    dropdownSection.addEventListener("mouseleave", hideDropdown);
+});
+// Navigation
+
+
+
+
+
+
+
+
+
 
 // Script 2
 $('.4slide').slick({
@@ -48,16 +110,18 @@ $('.4slide').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
             }
         },
     ]
@@ -90,16 +154,18 @@ $('.4slideAuto').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
             }
         },
     ]
@@ -128,16 +194,18 @@ $('.3slide').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
             }
         },
     ]
