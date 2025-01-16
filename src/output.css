@@ -1559,6 +1559,10 @@ video {
   padding-top: 5rem;
 }
 
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2255,6 +2259,10 @@ video {
     padding-right: 40%;
   }
 
+  .md\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -2415,6 +2423,10 @@ video {
 
   .lg\:pr-\[30\%\] {
     padding-right: 30%;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
   }
 
   .lg\:text-\[18px\] {
