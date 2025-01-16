@@ -2243,6 +2243,11 @@ video {
     padding-bottom: 16px;
   }
 
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pl-5 {
     padding-left: 1.25rem;
   }
@@ -2415,6 +2420,11 @@ video {
   .lg\:py-\[18px\] {
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pl-7 {
