@@ -2099,6 +2099,10 @@ video {
     margin-bottom: 1.25rem;
   }
 
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2189,6 +2193,10 @@ video {
 
   .md\:gap-2 {
     gap: 0.5rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:gap-x-20 {
