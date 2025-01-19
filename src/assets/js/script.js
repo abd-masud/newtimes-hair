@@ -500,3 +500,20 @@ document.getElementById('addToQuote').addEventListener('click', () => {
     alert(`You added ${quantityInput.value} items to the quote.`);
 });
 // Script 9
+
+
+
+
+
+
+
+
+
+// Script 10
+function dismissNotice(noticeId) {
+    const notice = document.getElementById(noticeId);
+    if (notice) {
+        notice.style.display = 'none';
+    }
+}
+// Script 10
